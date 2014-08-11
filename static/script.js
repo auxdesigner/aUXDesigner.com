@@ -1,10 +1,13 @@
 $(function(){
-
-	var sites = [ 
+	var i = -1;
+	var j = -1;
+	var words = [ 
 					'never says never',
 					'thinks before she mocks',
-					'should know how code works',
+					'should know how to prototype',
 					'is empathetic',
+					'respect platform pattern',
+					'does not ignore business goals',
 					'is obsessed with details',
 					'loves sticky notes',
 					'has a big heart',
@@ -19,13 +22,9 @@ $(function(){
 				];
 
 	var colors = [ 
-					
-					
 					'c1',
 					'c2',
-					'c3',
-					'c4'
-					
+					'c3'				
 				];
 
 	$('#go').click(function(){
@@ -36,25 +35,30 @@ $(function(){
      	}, 500 );
 
      	
-
 		setTimeout(function() {
-      		var siteNumber = Math.floor(Math.random()*sites.length);
-			$('#quote').text(sites[siteNumber]);
+      		
+			i = (i+1)%words.length;
+         	$('#quote').text(words[i]);
+
+      		//var siteNumber = Math.floor(Math.random()*words.length);
+		
 			$("#quote").css({ 'marginTop': '-0.2em' });  
 		}, 600);
 
 
 		setTimeout(function() {
+
+
       		$("#quote").animate({ 
 	        	opacity: "1",
 	        	marginTop: "0em",  
 	     	}, 500 );
 		}, 700);
 
-
-		var colorNumber = Math.floor(Math.random()*colors.length);
+		j = (j+1)%colors.length;
+		
 		$('body').removeClass();
-		$('body').addClass(colors[colorNumber]);
+		$('body').addClass(colors[j]);
 		
 		
 	}).click();
