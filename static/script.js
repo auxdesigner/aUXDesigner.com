@@ -6,13 +6,20 @@ $(function(){
 					'thinks before she mocks',
 					'should know how to prototype',
 					'is empathetic',
+					'communicates without a mouse',
 					'respect platform pattern',
 					'does not ignore business goals',
 					'is obsessed with details',
 					'loves sticky notes',
+					'likes saying "it depends"',
+					'is super curious',
+					'does not need to know PHP',
+					'gets her hands dirty',
+					'knows Dribbble is not everthing',
 					'has a big heart',
 					'asks a lot of questions',
 					'picks the right battle',
+					'is a visual thinker',
 					'is persistent',
 					'should be on Twitter',
 					'does not design with Lorem Ipsum',
@@ -24,7 +31,10 @@ $(function(){
 	var colors = [ 
 					'c1',
 					'c2',
-					'c3'				
+					'c3',
+					'c4',
+					'c5',
+					'c6'				
 				];
 
 	$('#go').click(function(){

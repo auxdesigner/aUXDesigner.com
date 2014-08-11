@@ -1,5 +1,9 @@
-body {
-		text-align: center; padding-top: 8em; background-color: #448aff; 
+	* {
+		-webkit-font-smoothing: antialiased;
+		-webkit-text-stroke: 0.35px;
+	}
+	body {
+		text-align: center; padding-top: 8em; background-color: #4285f4; 
 		transition: background-color 1.5s ease-in-out;
 		-webkit-transition: background-color 1.5s ease-in-out;
 		-moz-transition: background-color 1.5s ease-in-out;
@@ -32,16 +36,26 @@ body {
 	}
 	
 	.c1 {
-		background-color: #3b78e7; /*blue*/
+		background-color: #4285f4; /*blue*/
+	}
+	.c2 {
+		background-color: #33ac71; /*green*/
+	}
+	.c3 {
+		background-color: #546e7a; /*teal*/
 	}
 	
-	.c2 {
+	.c4 {
+		background-color: #6d4c41; /*brown*/
+	}
+	.c5 {
+		background-color: #c2185b; /*red*/
+	}
+	.c6 {
 		background-color: #673ab7; /*purple*/
 	}
 	
-	.c3 {
-		background-color: #e06055; /*red*/
-	}
+	
 	
 	
 
