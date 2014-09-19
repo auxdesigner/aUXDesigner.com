@@ -1,3 +1,5 @@
+
+
 $(function(){
 	var i = -1;
 	var j = -1;
@@ -49,11 +51,12 @@ $(function(){
       		
 			i = (i+1)%words.length;
          	$('#quote').text(words[i]);
-
+         	//document.title = 'A UX Designer ' +words[i];
       		//var siteNumber = Math.floor(Math.random()*words.length);
 		
 			$("#quote").css({ 'marginTop': '-0.2em' });  
 		}, 600);
+
 
 
 		setTimeout(function() {
@@ -72,4 +75,14 @@ $(function(){
 		
 		
 	}).click();
+
+
+
+		$('#custom-twitter').click(function(el){
+			el.target.href += "?text=" + urlencode(words[i]);
+			alert(words[i]);
+		});
 });
+
+
+

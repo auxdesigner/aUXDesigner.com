@@ -20,18 +20,18 @@
 		margin-top: 1em; margin-bottom: 2em; color:#fff; font-family: 'Vollkorn'; font-style: italic;
 		font-size:2.4em; line-height: 1; display: block;
 	}
-	a {
+	a#go {
 		font-family: 'Raleway'; font-size: 1.4em; color: #fff; display: block; border: 1px solid #fff; 
 		width: 30%; height: 50px; margin: 0 auto; line-height: 50px; text-decoration: none; opacity: .7;
-		min-width: 200px;
+		min-width: 200px; margin-bottom: 30px;
 		border-radius: 4px; 
 		-moz-border-radius: 4px; 
 		-webkit-border-radius: 4px; 
 	}
-	a:hover {
+	a#go:hover {
 		opacity: 1;
 	}
-	a:active {
+	a#go:active {
 		opacity: .7;
 	}
 	
