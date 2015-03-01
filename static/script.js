@@ -61,8 +61,8 @@ $(function(){
         	opacity: "0",          	
 		}, 300, 
 			function(){
-     			i = (i+1)%words.length;
-	         	$('#quote').text(words[i]);
+     			words.sort(function(){return Math.round(Math.random())});
+	         	$('#quote').text(words.pop());
 				$("#quote").css({ 'marginTop': '-0.2em' });
 				$("#quote").delay(100).animate({ 
 		        	opacity: "1",
