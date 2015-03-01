@@ -1,8 +1,17 @@
 
 
 $(function(){
-	var i = -1;
-	var j = -1;
+	$(document).ready(function(){
+
+	$("#quote").css({ 'marginTop': '-0.2em', 'opacity': '0' });
+	$("#quote").delay(100).animate({ 
+    	opacity: "1",
+    	marginTop: "0em"
+ 	}, 300 ); 
+	});
+
+	var i = 0;
+	var j = 0;
 	var words = [ 
 					'never says never',
 					'thinks before she mocks',
@@ -15,7 +24,7 @@ $(function(){
 					'loves sticky notes',
 					'likes saying "it depends"',
 					'is super curious',
-					'does not need to know PHP',
+					'should learn mindfulness',
 					'gets her hands dirty',
 					'knows Dribbble is not everthing',
 					'has a big heart',
@@ -25,7 +34,7 @@ $(function(){
 					'is persistent',
 					'should be on Twitter',
 					'does not design with Lorem Ipsum',
-					'knows Photoshop is only a tool',
+					'knows Photoshop is just a tool',
 					'tells stories with no bullshit',
 					'does more than pushing pixels'
 				];
@@ -41,47 +50,38 @@ $(function(){
 
 	$('#go').click(function(){
 		
+		MagicWand();		
+		
+	});
+
+
+	function MagicWand() {
+		$('#go').unbind('click');
 		$("#quote").animate({ 
-        	opacity: "0",  
-        	
-     	}, 500 );
+        	opacity: "0",          	
+		}, 300, 
+			function(){
+     			i = (i+1)%words.length;
+	         	$('#quote').text(words[i]);
+				$("#quote").css({ 'marginTop': '-0.2em' });
+				$("#quote").delay(100).animate({ 
+		        	opacity: "1",
+		        	marginTop: "0em",  
+		     	}, 300 ); 
+		     	j = (j+1)%colors.length;
+				$('body').removeClass();
+				$('body').addClass(colors[j]);
+				setTimeout(function() {
+				    $('#go').click(function(){		
+						MagicWand();		
+					});
+				}, 500);
+				
+			}
+		);
+	}
 
-     	
-		setTimeout(function() {
-      		
-			i = (i+1)%words.length;
-         	$('#quote').text(words[i]);
-         	//document.title = 'A UX Designer ' +words[i];
-      		//var siteNumber = Math.floor(Math.random()*words.length);
 		
-			$("#quote").css({ 'marginTop': '-0.2em' });  
-		}, 600);
-
-
-
-		setTimeout(function() {
-
-
-      		$("#quote").animate({ 
-	        	opacity: "1",
-	        	marginTop: "0em",  
-	     	}, 500 );
-		}, 700);
-
-		j = (j+1)%colors.length;
-		
-		$('body').removeClass();
-		$('body').addClass(colors[j]);
-		
-		
-	}).click();
-
-
-
-		$('#custom-twitter').click(function(el){
-			el.target.href += "?text=" + urlencode(words[i]);
-			alert(words[i]);
-		});
 });
 
 
