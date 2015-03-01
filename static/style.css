@@ -13,7 +13,7 @@
 		margin-bottom: 3em; height: 8em;
 	}
 	header {
-		font-family: 'Raleway'; font-size:1.8em; color:#fff; margin-bottom: .4em; opacity: .7;
+		font-family: 'Raleway'; font-size:1.8em; color:#fff; margin-bottom: .4em; opacity: .9;
 	}
 	
 	#quote {
@@ -22,7 +22,7 @@
 	}
 	a#go {
 		font-family: 'Raleway'; font-size: 1.4em; color: #fff; display: block; border: 1px solid #fff; 
-		width: 30%; height: 50px; margin: 0 auto; line-height: 50px; text-decoration: none; opacity: .7;
+		width: 25%; height: 50px; margin: 0 auto; line-height: 50px; text-decoration: none; opacity: .7;
 		min-width: 200px; margin-bottom: 30px;
 		border-radius: 4px; 
 		-moz-border-radius: 4px; 
