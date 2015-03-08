@@ -2,13 +2,16 @@
 
 $(function(){
 	$(document).ready(function(){
-	words.sort(function(){return Math.round(Math.random())});
-	$('#quote').text(words.pop());
-	$("#quote").css({ 'marginTop': '-0.2em', 'opacity': '0' });
-	$("#quote").delay(100).animate({ 
-    	opacity: "1",
-    	marginTop: "0em"
- 	}, 300 ); 
+		words.sort(function(){return Math.round(Math.random())});
+		$('#quote').text(words.pop());
+		colors.sort(function(){return Math.round(Math.random())});
+		$('body').addClass(colors.pop());
+
+		$("#quote").css({ 'marginTop': '-0.2em', 'opacity': '0' });
+		$("#quote").delay(100).animate({ 
+	    	opacity: "1",
+	    	marginTop: "0em"
+	 	}, 300 ); 
 	});
 
 	var i = 0;
