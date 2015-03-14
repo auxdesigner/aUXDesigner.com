@@ -4,7 +4,7 @@ $(function(){
 	$(document).ready(function(){
 		words.sort(function(){return Math.round(Math.random())});
 		$('#quote').text(words.pop());
-		colors.sort(function(){return Math.round(Math.random())});
+		
 		$('body').addClass(colors.pop());
 
 		$("#quote").css({ 'marginTop': '-0.2em', 'opacity': '0' });
@@ -15,7 +15,7 @@ $(function(){
 	});
 
 	var i = 0;
-	var j = 0;
+	var j = -1;
 	var words = [ 
 					'never says never',
 					'thinks before she mocks',
@@ -56,7 +56,8 @@ $(function(){
 					'c3',
 					'c4',
 					'c5',
-					'c6'				
+					'c6'
+
 				];
 
 	$('#go').click(function(){
@@ -80,6 +81,8 @@ $(function(){
 		        	marginTop: "0em",  
 		     	}, 300 ); 
 		     	j = (j+1)%colors.length;
+		     
+		     	
 				$('body').removeClass();
 				$('body').addClass(colors[j]);
 				setTimeout(function() {
