@@ -8,16 +8,25 @@
 		-webkit-transition: background-color 0.5s ease-in-out;
 		-moz-transition: background-color 0.5s ease-in-out;
     	-o-transition: background-color 0.5s ease-in-out;
+    	font-size:100%;
 	}
 	#box {
 		margin-bottom: 3em; height: 8em;
+	}
+	@font-face {
+	    font-family:"Raleway";
+	    src: url("Raleway-ExtraLight.ttf") 
+	}
+	@font-face {
+	    font-family:"Vollkorn";
+	    src: url("Vollkorn-Italic.ttf") 
 	}
 	header {
 		font-family: 'Raleway'; font-size:1.8em; color:#fff; margin-bottom: .4em; opacity: .9;
 	}
 	
 	#quote {
-		margin-top: 1em; margin-bottom: 2em; color:#fff; font-family: 'Vollkorn'; font-style: italic;
+		margin-top: 1em; margin-bottom: 2em; color:#fff; font-family: 'Vollkorn'; 
 		font-size:2.4em; line-height: 1; display: block;
 	}
 	a#go {
@@ -36,24 +45,24 @@
 	}
 	
 	.c1 {
-		background-color: #6d4c41; /*brown*/
+		background-color: #4285f4; /*blue*/
 	}
 	.c2 {
-		background-color:  #546e7a; /*teal*/
+		background-color: #33AC71; /*green*/
 	}
 	.c3 {
-		background-color: #33AC71; /*green*/
+		background-color: #546e7a; /*teal*/
 	}
 	
 	.c4 {
-		background-color: #5E97F6; /*blue*/
+		background-color: #6d4c41; /*brown*/
 	}
 
 	.c5 {
-		 background-color: #673ab7; /*purple*/
+		background-color: #880E4F; /*red*/
 	}
 	.c6 {
-		 background-color: #6d4c41; /**/
+		background-color: #673ab7; /*purple*/
 	}
 	
 	

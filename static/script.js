@@ -1,12 +1,14 @@
 
 
 $(function(){
-	$(document).ready(function(){
-		words.sort(function(){return Math.round(Math.random())});
-		$('#quote').text(words.pop());
-		
-		$('body').addClass(colors.pop());
+	
+	
 
+	$(document).ready(function(){
+		var randomColor = colors[j];
+		var randomQuote = words[Math.floor(Math.random() * words.length)];
+		$('body').addClass(randomColor);
+		$('#quote').text(randomQuote);
 		$("#quote").css({ 'marginTop': '-0.2em', 'opacity': '0' });
 		$("#quote").delay(100).animate({ 
 	    	opacity: "1",
@@ -14,8 +16,8 @@ $(function(){
 	 	}, 300 ); 
 	});
 
-	var i = 0;
-	var j = -1;
+	
+	
 	var words = [ 
 					'never says never',
 					'thinks before she mocks',
@@ -59,7 +61,7 @@ $(function(){
 					'c6'
 
 				];
-
+	var j = Math.floor(Math.random() * colors.length);
 	$('#go').click(function(){
 		
 		MagicWand();		
@@ -73,15 +75,17 @@ $(function(){
         	opacity: "0",          	
 		}, 300, 
 			function(){
-     			words.sort(function(){return Math.round(Math.random())});
-	         	$('#quote').text(words.pop());
+     			
+				var randomQuote = words[Math.floor(Math.random() * words.length)];
+				$('#quote').text(randomQuote);
+
 				$("#quote").css({ 'marginTop': '-0.2em' });
 				$("#quote").delay(100).animate({ 
 		        	opacity: "1",
 		        	marginTop: "0em",  
 		     	}, 300 ); 
 		     	j = (j+1)%colors.length;
-		     
+		     	
 		     	
 				$('body').removeClass();
 				$('body').addClass(colors[j]);
